@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BucketList</title>
+</head>
+<body>
+<h1>{{title}}</h1>
+<a href='/'>首页</a>
+<hr>
+<ul>
+{%for image in image_list%}
+	<li><a href="/images/{{image.id}}/">{{image.id}}</a> {{image.file_name}} <a href="https://s3-us-west-2.amazonaws.com/xinkaibuk1/{{image.file_name}}">download</a></li>
+{%endfor%}
+</ul>
+</body>
+</html>
